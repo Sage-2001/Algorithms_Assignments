@@ -6,10 +6,7 @@
 #include <algorithm>
 using namespace std;
 
-//1 1 1 1 1 1 1 1 1 1 not working
-
-//using single pass simply calculate the number of ones as taught through
-//regression
+// not working for 1,1,1,1,1,1,1
 
 int solve(vector<int>& arr){
     int count_one = -1;
