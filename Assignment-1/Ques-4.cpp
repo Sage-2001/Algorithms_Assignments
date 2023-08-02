@@ -1,29 +1,25 @@
-//2. Given a binary string of length n, design a linear time algorithm to compute the
-// length of the largest dense sub-string of the given string.
+// 4. Given a binary string S of length n, design a linear time algorithm to compute k,
+// such that the number of 0’s in S[0..k] is equal to number of 1’s in S[k+1..n-1].
 
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
-//using single pass two pointer O(N) complexity
+//1 1 1 1 1 1 1 1 1 1 not working
+
+//using single pass simply calculate the number of ones as taught through
+//regression
 
 int solve(vector<int>& arr){
-    int ans = 0;
-    int count_zero = 0, count_one = 0;
+    int count_one = -1;
 
     for(int i = 0;i < arr.size();i++){
-        if(arr[i] == 0){
-            count_zero++;
-        }
-        else{
+        if(arr[i] == 1){
             count_one++;
         }
-        if(count_one > count_zero){
-            ans = max(ans,i+1);
-        }
     }
-    return ans;
+    return count_one;
 }
 
 int main(){

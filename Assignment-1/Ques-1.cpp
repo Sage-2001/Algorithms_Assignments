@@ -12,7 +12,7 @@ using namespace std;
 
 //using single pass two pointer O(N) complexity
 
-int dense_counter(vector<int>& arr){
+int solve(vector<int>& arr){
     int ans = 0;
     int count_zero = 0, count_one = 0;
 
@@ -42,6 +42,6 @@ int main(){
         arr.push_back(x);
     }
 
-    cout<<endl<<"Ans is "<<dense_counter(arr)<<endl;
+    cout<<endl<<"Ans is "<<solve(arr)<<endl;
     return 0;
 }

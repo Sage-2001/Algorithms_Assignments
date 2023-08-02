@@ -1,12 +1,12 @@
-//2. Given a binary string of length n, design a linear time algorithm to compute the
-// length of the largest dense sub-string of the given string.
+// 3. Given a binary string of length n, design a linear time algorithm to compute the
+// length of the largest sub-string which contains equal number of 0’s and 1’s.
+
 
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
-//using single pass two pointer O(N) complexity
 
 int solve(vector<int>& arr){
     int ans = 0;
@@ -19,7 +19,7 @@ int solve(vector<int>& arr){
         else{
             count_one++;
         }
-        if(count_one > count_zero){
+        if(count_zero - count_one == 0){
             ans = max(ans,i+1);
         }
     }
