@@ -6,8 +6,6 @@
 #include <algorithm>
 using namespace std;
 
-// not working for 1,1,1,1,1,1,1
-
 int solve(vector<int>& arr){
     int count_one = -1;
 
